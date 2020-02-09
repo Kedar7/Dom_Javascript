@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="keys">
+  <div data-keys="65" class="key">
+    <kbd>A</kbd>
+    <span class="sound">Clap</span>
+  </div>
+</div>
+
+ <audio data-key="65" src="sounds/hihat.wav"></audio>
+
+  <!-- <audio data-key="65" src="sounds/clap.wav"></audio> -->
+<script>
+  console.log("coming")
+  window.addEventListener('keydown',callback);
+  function callback(e){
+    let audio = document.querySelector('audio[data-key="65"]');
+    audio.currentTime = 0;
+    audio.play();
+  }
+;
+</script>
+
+
+</body>
+</html>
